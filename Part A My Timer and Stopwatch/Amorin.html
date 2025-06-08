@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Keeper Pro</title>
+    <link rel="stylesheet" href="Amorin.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Time Keeper Pro</h1>
+            <button class="reset-btn">Reset</button>
+        </header>
+        
+        <div class="mode-selector">
+            <button class="mode-btn active" data-mode="stopwatch">Stopwatch</button>
+            <button class="mode-btn" data-mode="timer">Timer</button>
+        </div>
+        
+        <div class="display-container">
+            <div id="stopwatch-display">
+                <div class="time-display">00:00:00:00</div>
+                <div class="controls">
+                    <button class="control-btn start-btn" id="start-stopwatch">Start</button>
+                    <button class="control-btn stop-btn" id="stop-stopwatch">Stop</button>
+                    <button class="control-btn lap-btn" id="lap-stopwatch">Lap</button>
+                    <button class="control-btn reset-btn-bottom" id="reset-stopwatch">Reset</button>
+                </div>
+                
+                <div class="lap-section">
+                    <div class="lap-header">
+                        <h2>Lap Times</h2>
+                        <button class="clear-btn" id="clear-laps">Clear All</button>
+                    </div>
+                    <div class="laps-container" id="laps-container">
+                        <!-- Laps will appear here -->
+                    </div>
+                </div>
+            </div>
+            
+            <div id="timer-display" class="hidden">
+                <div class="time-display" id="timer-time">00:00:00</div>
+                
+                <div class="timer-inputs">
+                    <div>
+                        <input type="number" class="time-input" id="hours" min="0" max="99" value="0">
+                        <span class="input-label">Hours</span>
+                    </div>
+                    <div>
+                        <input type="number" class="time-input" id="minutes" min="0" max="59" value="0">
+                        <span class="input-label">Minutes</span>
+                    </div>
+                    <div>
+                        <input type="number" class="time-input" id="seconds" min="0" max="59" value="0">
+                        <span class="input-label">Seconds</span>
+                    </div>
+                </div>
+                
+                <div class="controls">
+                    <button class="control-btn start-btn" id="start-timer">Start</button>
+                    <button class="control-btn stop-btn" id="stop-timer">Stop</button>
+                    <button class="control-btn reset-btn-bottom" id="reset-timer">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Amorin.js"></script>
+</body>
+</html>
